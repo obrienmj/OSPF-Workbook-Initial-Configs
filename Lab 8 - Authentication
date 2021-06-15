@@ -5,6 +5,9 @@ hostname R1
 int g0/2
  ip add 10.0.12.1 255.255.255.0
  no shut
+int g0/3
+ ip add 10.0.13.1 255.255.255.0
+ no shut
 int lo0
  ip add 1.1.1.1 255.255.255.255
 router ospf 1
@@ -38,6 +41,9 @@ conf t
 hostname R3
 int g0/0
  ip add 10.0.234.3 255.255.255.0
+ no shut
+int g0/1
+ ip add 10.0.13.3 255.255.255.0
  no shut
 int lo0
  ip add 3.3.3.3 255.255.255.255
